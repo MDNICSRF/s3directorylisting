@@ -71,3 +71,37 @@ dependencies {
 	    <type>apklib</type>
 	</dependency>
 ```
+
+
+#### Eclipse
+- SupportLibrary v4
+- [NineOldAndroids-2.4.0](https://github.com/downloads/JakeWharton/NineOldAndroids/nineoldandroids-2.4.0.jar)
+- [AndroidViewAnimations-1.1.2](https://github.com/daimajia/AndroidViewAnimations/releases/download/v1.1.2/AndroidViewAnimations-1.1.2.jar)
+- [AndroidEasingFunctions-1.0.0](https://github.com/daimajia/AndroidViewAnimations/releases/download/v1.0.6/AndroidEasingFunctions-1.0.0.jar)
+- [AndroidViewHover-1.0.3](https://github.com/daimajia/AndroidViewHover/releases/download/v1.0.3/AndroidViewHover-v1.0.3.jar)
+
+### Step2
+
+![](http://ww4.sinaimg.cn/mw690/610dc034jw1ej5giogymhj20dw085q36.jpg)
+
+1. Create an original view, and make sure it was wrapped by `BlurLayout`
+
+	for example:
+	```xml
+		<com.daimajia.androidviewhover.BlurLayout
+				android:id="@+id/sample"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content">
+	            <ImageView
+	                android:layout_centerInParent="true"
+	                android:scaleType="fitXY"
+	                android:src="@drawable/kid"
+	                android:layout_width="match_parent"/>
+		</com.daimajia.androidviewhover.BlurLayout>
+	```
+	Note: `BlurLayout` is entended from `RelativeLayout`. You can use the `RelativeLayout` rules to layout your view.
+
+
+2. 	Create a hover view, there is no rules to obey. Just please remember that this view will be stretched as large as the original view you have created.
+
+3.	Bind a hover view to `BlurLayout` 
