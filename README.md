@@ -105,3 +105,37 @@ dependencies {
 2. 	Create a hover view, there is no rules to obey. Just please remember that this view will be stretched as large as the original view you have created.
 
 3.	Bind a hover view to `BlurLayout` 
+
+
+	```java
+		BlurLayout sampleLayout = (BlurLayout)findViewById(R.id.sample);
+		View hover = LayoutInflater.from(mContext).inflate(R.layout.hover, null);
+		sampleLayout.setHoverView(hover);
+	```
+
+	and don't forget that you can add various animations just in one line code. For example:
+	```java
+		//View (R.id.heart) appear animation.
+		sampleLayout.addChildAppearAnimator(hover, R.id.heart, Techniques.FlipInX);
+		//View (R.id.heart) disappear animation.
+		sampleLayout.addChildDisappearAnimator(hover, R.id.heart, Techniques.FlipOutX);
+	```
+
+You can view the samples in my [preset examples](https://github.com/daimajia/AndroidViewHover/blob/master/demo/src/main/java/com/daimajia/androidviewhover/demo/MainActivity.java).
+
+# Animations
+
+This project provides a lot of animations you can choose. Animations are from my another open-source project [AndroidViewAnimations](https://github.com/daimajia/AndroidViewAnimations#effects). And you can aslo using [easing funcitons](https://github.com/daimajia/AnimationEasingFunctions) to make your animations more real. Please enjoy it.
+
+# Thanks
+
+- [NineOldAndroids](https://github.com/JakeWharton/NineOldAndroids) by JakeWharton
+- [AndroidViewAnimations](https://github.com/daimajia/AndroidViewAnimations) by me
+- [AnimationEasingFunctions](https://github.com/daimajia/AnimationEasingFunctions) by me
+
+# About me
+
+A student in mainland China. 
+
+Welcome to [offer me an internship](mailto:daimajia@gmail.com).
+If you have any new idea about this project, feel free to [contact me](mailto:daimajia@gmail.com).
