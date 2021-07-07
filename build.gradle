@@ -5,3 +5,4 @@ buildscript {
         jcenter()
         mavenCentral()
         maven {
+            url "http
