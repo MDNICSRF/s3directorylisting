@@ -3,4 +3,5 @@
 buildscript {
     repositories {
         jcenter()
-      
+        mavenCentral()
+        maven {
