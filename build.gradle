@@ -5,4 +5,4 @@ buildscript {
         jcenter()
         mavenCentral()
         maven {
-            url "http
+            url "https://oss.sonatype.org/content/reposit
