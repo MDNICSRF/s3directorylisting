@@ -5,4 +5,7 @@ buildscript {
         jcenter()
         mavenCentral()
         maven {
-            url "https://oss.sonatype.org/content/reposit
+            url "https://oss.sonatype.org/content/repositories/snapshots"
+        }
+    }
+    depe
