@@ -8,4 +8,5 @@ buildscript {
             url "https://oss.sonatype.org/content/repositories/snapshots"
         }
     }
-    depe
+    dependencies {
+        classpath 'com.and
