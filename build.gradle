@@ -11,4 +11,4 @@ buildscript {
     dependencies {
         classpath 'com.android.tools.build:gradle:1.1.0'
 
-        // NOTE: Do not place 
+        // NOTE: Do not place your application dependencies here; they 
