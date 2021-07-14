@@ -17,4 +17,5 @@ buildscript {
 }
 
 allprojects {
-    reposito
+    repositories {
+        mavenCentral
