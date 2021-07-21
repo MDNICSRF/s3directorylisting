@@ -42,3 +42,37 @@ public class MainActivity extends ActionBarActivity {
                 YoYo.with(Techniques.Swing)
                         .duration(550)
                         .playOn(v);
+            }
+        });
+        mSampleLayout.setHoverView(hover);
+        mSampleLayout.setBlurDuration(550);
+        mSampleLayout.addChildAppearAnimator(hover, R.id.heart, Techniques.FlipInX, 550, 0);
+        mSampleLayout.addChildAppearAnimator(hover, R.id.share, Techniques.FlipInX, 550, 250);
+        mSampleLayout.addChildAppearAnimator(hover, R.id.more, Techniques.FlipInX, 550, 500);
+
+        mSampleLayout.addChildDisappearAnimator(hover, R.id.heart, Techniques.FlipOutX, 550, 500);
+        mSampleLayout.addChildDisappearAnimator(hover, R.id.share, Techniques.FlipOutX, 550, 250);
+        mSampleLayout.addChildDisappearAnimator(hover, R.id.more, Techniques.FlipOutX, 550, 0);
+
+        mSampleLayout.addChildAppearAnimator(hover, R.id.description, Techniques.FadeInUp);
+        mSampleLayout.addChildDisappearAnimator(hover, R.id.description, Techniques.FadeOutDown);
+
+        //sample 2
+
+        mSampleLayout2 = (BlurLayout)findViewById(R.id.blur_layout2);
+        View hover2 = LayoutInflater.from(mContext).inflate(R.layout.hover_sample2, null);
+        hover2.findViewById(R.id.avatar).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Toast.makeText(mContext, "Pretty Cool, Right?", Toast.LENGTH_SHORT).show();
+            }
+        });
+        mSampleLayout2.setHoverView(hover2);
+
+        mSampleLayout2.addChildAppearAnimator(hover2, R.id.description, Techniques.FadeInUp);
+        mSampleLayout2.addChildDisappearAnimator(hover2, R.id.description, Techniques.FadeOutDown);
+        mSampleLayout2.addChildAppearAnimator(hover2, R.id.avatar, Techniques.DropOut, 1200);
+        mSampleLayout2.addChildDisappearAnimator(hover2, R.id.avatar, Techniques.FadeOutUp);
+        mSampleLayout2.setBlurDuration(1000);
+
+        //sample3
