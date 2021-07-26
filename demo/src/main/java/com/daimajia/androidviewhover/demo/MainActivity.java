@@ -76,3 +76,32 @@ public class MainActivity extends ActionBarActivity {
         mSampleLayout2.setBlurDuration(1000);
 
         //sample3
+        mSampleLayout3 = (BlurLayout)findViewById(R.id.blur_layout3);
+        View hover3 = LayoutInflater.from(mContext).inflate(R.layout.hover_sample3, null);
+        mSampleLayout3.setHoverView(hover3);
+        mSampleLayout3.addChildAppearAnimator(hover3, R.id.eye, Techniques.Landing);
+        mSampleLayout3.addChildDisappearAnimator(hover3, R.id.eye, Techniques.TakingOff);
+        mSampleLayout3.enableZoomBackground(true);
+        mSampleLayout3.setBlurDuration(1200);
+
+        //sample 4
+
+        mSampleLayout4 = (BlurLayout)findViewById(R.id.blur_layout4);
+        View hover4 = LayoutInflater.from(mContext).inflate(R.layout.hover_sample4,null);
+        mSampleLayout4.setHoverView(hover4);
+        mSampleLayout4.addChildAppearAnimator(hover4, R.id.cat, Techniques.SlideInLeft);
+        mSampleLayout4.addChildAppearAnimator(hover4, R.id.mail, Techniques.SlideInRight);
+
+        mSampleLayout4.addChildDisappearAnimator(hover4, R.id.cat, Techniques.SlideOutLeft);
+        mSampleLayout4.addChildDisappearAnimator(hover4, R.id.mail, Techniques.SlideOutRight);
+
+        mSampleLayout4.addChildAppearAnimator(hover4, R.id.content, Techniques.BounceIn);
+        mSampleLayout4.addChildDisappearAnimator(hover4, R.id.content, Techniques.FadeOutUp);
+
+
+        hover4.findViewById(R.id.cat).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent getWebPage = new Intent(Intent.ACTION_VIEW, Uri.parse("https://github.com/daimajia"));
+                startActivity(getWebPage);
+            }
