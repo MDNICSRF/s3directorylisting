@@ -4,4 +4,4 @@
     android:scrollbars="vertical"
     xmlns:tools="http://schemas.android.com/tools">
     <RelativeLayout
-        andro
+        android:layout_width="match_paren
