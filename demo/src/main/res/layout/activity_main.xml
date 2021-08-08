@@ -4,4 +4,5 @@
     android:scrollbars="vertical"
     xmlns:tools="http://schemas.android.com/tools">
     <RelativeLayout
-        android:layout_width="match_paren
+        android:layout_width="match_parent"
+        android:layout_height="mat
