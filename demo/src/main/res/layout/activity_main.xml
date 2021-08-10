@@ -7,4 +7,5 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:paddingLeft="@dimen/activity_horizontal_margin"
-        android:paddingRight="@dim
+        android:paddingRight="@dimen/activity_horizontal_margin"
+    
