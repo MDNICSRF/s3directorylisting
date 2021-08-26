@@ -13,4 +13,5 @@
         tools:context=".MainActivity">
         <com.daimajia.androidviewhover.BlurLayout
             android:id="@+id/blur_layout"
-            android:layout_width="wr
+            android:layout_width="wrap_content"
+            android:layout_margi
