@@ -15,4 +15,5 @@
             android:id="@+id/blur_layout"
             android:layout_width="wrap_content"
             android:layout_marginBottom="5dp"
-            android:la
+            android:layout_height="wrap_content">
+       
