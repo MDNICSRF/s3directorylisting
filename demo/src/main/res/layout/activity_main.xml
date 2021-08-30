@@ -18,4 +18,5 @@
             android:layout_height="wrap_content">
             <ImageView
                 android:id="@+id/source"
-                android:scaleType="fitX
+                android:scaleType="fitXY"
+                android:src="@dra
