@@ -20,4 +20,5 @@
                 android:id="@+id/source"
                 android:scaleType="fitXY"
                 android:src="@drawable/php"
-                android:l
+                android:layout_width="match_parent"
+ 
