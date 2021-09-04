@@ -24,4 +24,4 @@
                 android:layout_height="125dp" />
         </com.daimajia.androidviewhover.BlurLayout>
         <com.daimajia.androidviewhover.BlurLayout
-    
+            android:id="@+id/blur_l
