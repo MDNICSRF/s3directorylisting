@@ -32,4 +32,5 @@
             android:layout_height="wrap_content">
             <ImageView
                 android:layout_below="@+id/source"
-                android:id="@+i
+                android:id="@+id/source2"
+             
