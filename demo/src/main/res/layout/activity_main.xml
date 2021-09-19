@@ -33,4 +33,4 @@
             <ImageView
                 android:layout_below="@+id/source"
                 android:id="@+id/source2"
-             
+                android:layout_cente
