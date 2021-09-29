@@ -41,4 +41,5 @@
         </com.daimajia.androidviewhover.BlurLayout>
 
         <com.daimajia.androidviewhover.BlurLayout
-            android:id="
+            android:id="@+id/blur_layout3"
+            a
