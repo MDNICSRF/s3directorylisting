@@ -48,4 +48,5 @@
             android:layout_marginBottom="5dp"
             android:layout_height="wrap_content">
             <ImageView
-                and
+                android:layout_below="@+id/source"
+       
