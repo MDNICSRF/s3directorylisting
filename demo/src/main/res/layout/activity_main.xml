@@ -52,4 +52,5 @@
                 android:id="@+id/source3"
                 android:layout_centerInParent="true"
                 android:scaleType="fitXY"
-                android:src="@drawable/
+                android:src="@drawable/strawberries"
+                andr
