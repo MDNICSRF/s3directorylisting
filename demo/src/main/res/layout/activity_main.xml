@@ -53,4 +53,5 @@
                 android:layout_centerInParent="true"
                 android:scaleType="fitXY"
                 android:src="@drawable/strawberries"
-                android:layout_width="match_
+                android:layout_width="match_parent"
+           
