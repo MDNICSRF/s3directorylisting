@@ -54,4 +54,5 @@
                 android:scaleType="fitXY"
                 android:src="@drawable/strawberries"
                 android:layout_width="match_parent"
-           
+                android:layout_height="125dp" />
+      
