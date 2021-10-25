@@ -59,4 +59,4 @@
 
         <com.daimajia.androidviewhover.BlurLayout
             android:id="@+id/blur_layout4"
-            and
+            android:layout_marginTop="@dimen/activity_
