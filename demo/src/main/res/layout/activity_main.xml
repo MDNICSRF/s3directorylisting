@@ -63,4 +63,5 @@
             android:layout_below="@+id/blur_layout3"
             android:layout_width="wrap_content"
             android:layout_marginBottom="5dp"
-            android:layout_he
+            android:layout_height="wrap_content">
+          
