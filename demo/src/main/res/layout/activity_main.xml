@@ -66,4 +66,4 @@
             android:layout_height="wrap_content">
             <ImageView
                 android:layout_below="@+id/source"
-         
+                android:id="@+id/source4"
