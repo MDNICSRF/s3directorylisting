@@ -67,3 +67,4 @@
             <ImageView
                 android:layout_below="@+id/source"
                 android:id="@+id/source4"
+                android:layo
