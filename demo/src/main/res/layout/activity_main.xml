@@ -69,4 +69,4 @@
                 android:id="@+id/source4"
                 android:layout_centerInParent="true"
                 android:scaleType="fitXY"
-                andro
+                android:src="@drawable/kid"
