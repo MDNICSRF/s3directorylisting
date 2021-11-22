@@ -70,4 +70,5 @@
                 android:layout_centerInParent="true"
                 android:scaleType="fitXY"
                 android:src="@drawable/kid"
-                andro
+                android:layout_width="match_parent"
+           
