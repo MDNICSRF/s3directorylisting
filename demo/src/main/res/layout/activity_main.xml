@@ -71,4 +71,5 @@
                 android:scaleType="fitXY"
                 android:src="@drawable/kid"
                 android:layout_width="match_parent"
-                android:layout_height="140d
+                android:layout_height="140dp" />
+        </com.daimajia.a
