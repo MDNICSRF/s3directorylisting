@@ -5,4 +5,5 @@
     android:layout_height="match_parent">
     <LinearLayout
         android:id="@+id/animation_area"
-        android:layout_centerInParen
+        android:layout_centerInParent="true"
+        and
