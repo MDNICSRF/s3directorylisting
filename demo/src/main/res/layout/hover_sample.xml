@@ -6,4 +6,5 @@
     <LinearLayout
         android:id="@+id/animation_area"
         android:layout_centerInParent="true"
-        and
+        android:layout_width="match_parent"
+        an
