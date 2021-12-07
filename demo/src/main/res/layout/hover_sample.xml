@@ -7,4 +7,4 @@
         android:id="@+id/animation_area"
         android:layout_centerInParent="true"
         android:layout_width="match_parent"
-        an
+        android:orientation="horizontal
