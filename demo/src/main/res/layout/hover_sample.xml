@@ -9,4 +9,6 @@
         android:layout_width="match_parent"
         android:orientation="horizontal"
         android:gravity="center"
-        android:layout_height="ma
+        android:layout_height="match_parent">
+        <ImageView
+ 
