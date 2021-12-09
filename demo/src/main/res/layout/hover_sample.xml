@@ -11,4 +11,4 @@
         android:gravity="center"
         android:layout_height="match_parent">
         <ImageView
- 
+            android:layout_mar
