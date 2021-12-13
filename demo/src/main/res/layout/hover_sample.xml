@@ -13,4 +13,5 @@
         <ImageView
             android:layout_marginRight="20dp"
             android:id="@+id/heart"
-            android:src
+            android:src="@drawable/heart"
+            and
