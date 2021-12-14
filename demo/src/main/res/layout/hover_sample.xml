@@ -15,4 +15,4 @@
             android:id="@+id/heart"
             android:src="@drawable/heart"
             android:layout_width="25dp"
-     
+            android:layout_height=
