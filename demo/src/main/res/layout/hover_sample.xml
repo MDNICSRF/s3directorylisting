@@ -19,4 +19,5 @@
         <ImageView
             android:id="@+id/share"
             android:layout_marginRight="20dp"
-            a
+            android:src="@drawable/share"
+  
