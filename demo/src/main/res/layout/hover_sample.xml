@@ -18,4 +18,5 @@
             android:layout_height="25dp" />
         <ImageView
             android:id="@+id/share"
-            android:layout_marg
+            android:layout_marginRight="20dp"
+            a
