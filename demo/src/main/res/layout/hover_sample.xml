@@ -20,4 +20,4 @@
             android:id="@+id/share"
             android:layout_marginRight="20dp"
             android:src="@drawable/share"
-  
+            android:layout_width="25d
