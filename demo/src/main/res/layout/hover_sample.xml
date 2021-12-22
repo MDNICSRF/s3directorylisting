@@ -21,4 +21,6 @@
             android:layout_marginRight="20dp"
             android:src="@drawable/share"
             android:layout_width="25dp"
-            android:layout_h
+            android:layout_height="25dp"/>
+        <ImageView
+    
