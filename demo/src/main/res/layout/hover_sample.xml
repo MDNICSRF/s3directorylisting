@@ -23,4 +23,5 @@
             android:layout_width="25dp"
             android:layout_height="25dp"/>
         <ImageView
-            android:id="@+id/mor
+            android:id="@+id/more"
+            android:src="@drawable
