@@ -25,4 +25,5 @@
         <ImageView
             android:id="@+id/more"
             android:src="@drawable/more"
-            android:layou
+            android:layout_width="25dp"
+           
