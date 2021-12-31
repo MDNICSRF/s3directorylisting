@@ -31,4 +31,4 @@
     <TextView
         android:id="@+id/description"
         android:text="Parse PHP SDK"
-   
+        android:layout_marginLeft="12dp
