@@ -30,4 +30,5 @@
     </LinearLayout>
     <TextView
         android:id="@+id/description"
+        android:text="Parse PHP SDK"
    
