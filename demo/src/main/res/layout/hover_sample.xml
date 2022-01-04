@@ -32,4 +32,5 @@
         android:id="@+id/description"
         android:text="Parse PHP SDK"
         android:layout_marginLeft="12dp"
-        android:textColor="#ff
+        android:textColor="#ffffff"
+        android:layout_marginBot
