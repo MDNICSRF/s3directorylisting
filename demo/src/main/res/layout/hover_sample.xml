@@ -33,4 +33,5 @@
         android:text="Parse PHP SDK"
         android:layout_marginLeft="12dp"
         android:textColor="#ffffff"
-        android:layout_marginBot
+        android:layout_marginBottom="12dp"
+        android:layout_a
