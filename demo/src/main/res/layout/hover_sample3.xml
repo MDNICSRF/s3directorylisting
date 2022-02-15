@@ -8,4 +8,5 @@
     <ImageView
         android:layout_marginRight="20dp"
         android:id="@+id/eye"
+        android:layout_centerInParent="true"
   
