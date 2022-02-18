@@ -10,4 +10,5 @@
         android:id="@+id/eye"
         android:layout_centerInParent="true"
         android:src="@drawable/eye"
-        
+        android:layout_width="25dp"
+        andro
