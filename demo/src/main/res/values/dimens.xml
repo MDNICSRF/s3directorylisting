@@ -1,3 +1,3 @@
 <resources>
     <!-- Default screen margins, per the Android Design guidelines. -->
-    <d
+    <dimen name="activity_horizontal_margin">12
