@@ -2,4 +2,5 @@
 <resources>
 
     <string name="app_name">AndroidViewHover</string>
-    <string name="hello_world">H
+    <string name="hello_world">Hello world!</string>
+   
