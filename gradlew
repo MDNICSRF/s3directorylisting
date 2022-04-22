@@ -26,4 +26,5 @@ die ( ) {
     exit 1
 }
 
-# OS specific s
+# OS specific support (must be 'true' or 'false').
+cygwi
