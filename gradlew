@@ -27,4 +27,6 @@ die ( ) {
 }
 
 # OS specific support (must be 'true' or 'false').
-cygwi
+cygwin=false
+msys=false
+darwin=false
