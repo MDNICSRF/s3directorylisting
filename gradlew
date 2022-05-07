@@ -42,4 +42,4 @@ case "`uname`" in
     ;;
 esac
 
-# For Cygwin, ensure paths are 
+# For Cygwin, ensure paths are in UNIX format before anything
