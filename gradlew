@@ -37,4 +37,8 @@ case "`uname`" in
   Darwin* )
     darwin=true
     ;;
-  
+  MINGW* )
+    msys=true
+    ;;
+esac
+
