@@ -44,4 +44,4 @@ esac
 
 # For Cygwin, ensure paths are in UNIX format before anything is touched.
 if $cygwin ; then
-    [ -n "$
+    [ -n "$JAVA_HOME" ] && JAVA_HOME=`cygpat
