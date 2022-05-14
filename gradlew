@@ -47,4 +47,5 @@ if $cygwin ; then
     [ -n "$JAVA_HOME" ] && JAVA_HOME=`cygpath --unix "$JAVA_HOME"`
 fi
 
-# At
+# Attempt to set APP_HOME
+# Resolve lin
