@@ -48,4 +48,6 @@ if $cygwin ; then
 fi
 
 # Attempt to set APP_HOME
-# Resolve lin
+# Resolve links: $0 may be a link
+PRG="$0"
+# Need this for 
