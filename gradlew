@@ -65,4 +65,4 @@ cd "`dirname \"$PRG\"`/" >&-
 APP_HOME="`pwd -P`"
 cd "$SAVED" >&-
 
-CLAS
+CLASSPATH=$APP_HOME/gradle/wrapper/
