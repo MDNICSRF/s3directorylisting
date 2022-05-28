@@ -62,4 +62,7 @@ while [ -h "$PRG" ] ; do
 done
 SAVED="`pwd`"
 cd "`dirname \"$PRG\"`/" >&-
-APP_HOME
+APP_HOME="`pwd -P`"
+cd "$SAVED" >&-
+
+CLAS
