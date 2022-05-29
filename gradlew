@@ -67,4 +67,4 @@ cd "$SAVED" >&-
 
 CLASSPATH=$APP_HOME/gradle/wrapper/gradle-wrapper.jar
 
-# Determine
+# Determine the Java command to use to start the JV
