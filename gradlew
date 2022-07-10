@@ -91,4 +91,6 @@ fi
 
 # Increase the maximum file descriptors if we can.
 if [ "$cygwin" = "false" -a "$darwin" = "false" ] ; then
-    MAX_FD_LIMIT=`ulimit -
+    MAX_FD_LIMIT=`ulimit -H -n`
+    if [ $? -eq 0 ] ; then
+       
