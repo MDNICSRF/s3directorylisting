@@ -106,4 +106,5 @@ if [ "$cygwin" = "false" -a "$darwin" = "false" ] ; then
 fi
 
 # For Darwin, add options to specify how the application appears in the dock
-if $
+if $darwin; then
+    GRADLE_OPTS="$GRAD
