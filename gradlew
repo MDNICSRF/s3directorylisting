@@ -115,4 +115,5 @@ if $cygwin ; then
     APP_HOME=`cygpath --path --mixed "$APP_HOME"`
     CLASSPATH=`cygpath --path --mixed "$CLASSPATH"`
 
-    # We build the pattern for arguments to
+    # We build the pattern for arguments to be converted via cygpath
+    ROOTDIRSRAW=
