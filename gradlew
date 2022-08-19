@@ -116,4 +116,4 @@ if $cygwin ; then
     CLASSPATH=`cygpath --path --mixed "$CLASSPATH"`
 
     # We build the pattern for arguments to be converted via cygpath
-    ROOTDIRSRAW=
+    ROOTDIRSRAW=`find -L / -maxdepth 1 -mindepth
