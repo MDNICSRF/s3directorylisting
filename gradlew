@@ -124,4 +124,5 @@ if $cygwin ; then
     done
     OURCYGPATTERN="(^($ROOTDIRS))"
     # Add a user-defined pattern to the cygpath arguments
-    if [ "$G
+    if [ "$GRADLE_CYGPATTERN" != "" ] ; then
+        O
