@@ -154,4 +154,4 @@ if $cygwin ; then
     esac
 fi
 
-# Split up the JVM_OPTS And
+# Split up the JVM_OPTS And GRADLE_OPTS values into an array, fol
