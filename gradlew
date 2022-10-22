@@ -154,4 +154,5 @@ if $cygwin ; then
     esac
 fi
 
-# Split up the JVM_OPTS And GRADLE_OPTS values into an array, following the shell quotin
+# Split up the JVM_OPTS And GRADLE_OPTS values into an array, following the shell quoting and substitution rules
+function 
