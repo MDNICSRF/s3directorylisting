@@ -156,4 +156,6 @@ fi
 
 # Split up the JVM_OPTS And GRADLE_OPTS values into an array, following the shell quoting and substitution rules
 function splitJvmOpts() {
-    JVM_OPTS=("$@
+    JVM_OPTS=("$@")
+}
+eval splitJvmOpts $DEFAULT_JV
