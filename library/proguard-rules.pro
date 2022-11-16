@@ -2,4 +2,6 @@
 # By default, the flags in this file are appended to flags specified
 # in /Applications/Android Studio.app/sdk/tools/proguard/proguard-android.txt
 # You can edit the include path and order by changing the proguardFiles
-# directive
+# directive in build.gradle.
+#
+#
