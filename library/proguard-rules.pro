@@ -5,4 +5,4 @@
 # directive in build.gradle.
 #
 # For more details, see
-#   htt
+#   http://developer.android.com/gu
