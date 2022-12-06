@@ -31,3 +31,28 @@ public class BlurLayout extends RelativeLayout {
 
 
     private View mHoverView;
+
+    private boolean enableBlurBackground = true;
+    private int mBlurRadius = 10;
+    private ImageView mBlurImage;
+
+    private static long DURATION = 500;
+
+    private ArrayList<Animator> mPlayingAnimators = new ArrayList<Animator>();
+
+    private ArrayList<Animator> mAppearingAnimators = new ArrayList<Animator>();
+    private ArrayList<Animator> mDisappearingAnimators = new ArrayList<Animator>();
+
+    private ArrayList<AppearListener> mAppearListeners = new ArrayList<AppearListener>();
+    private ArrayList<DisappearListener> mDisappearListeners = new ArrayList<DisappearListener>();
+
+    private boolean enableBackgroundZoom = false;
+    private float mZoomRatio = 1.14f;
+
+    private boolean enableTouchEvent = true;
+
+    private Animator mHoverAppearAnimator;
+    private YoYo.AnimationComposer mHoverAppearAnimationComposer;
+
+    private Animator mHoverDisappearAnimator;
+    private YoYo.AnimationComposer mHoverDisappearAnimationComposer;
