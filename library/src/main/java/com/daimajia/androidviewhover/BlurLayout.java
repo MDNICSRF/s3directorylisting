@@ -56,3 +56,37 @@ public class BlurLayout extends RelativeLayout {
 
     private Animator mHoverDisappearAnimator;
     private YoYo.AnimationComposer mHoverDisappearAnimationComposer;
+
+    private HashMap<View, ArrayList<AnimationProxy>> mChildAppearAnimators = new HashMap<View, ArrayList<AnimationProxy>>();
+    private HashMap<View, ArrayList<AnimationProxy>> mChildDisappearAnimators = new HashMap<View, ArrayList<AnimationProxy>>();
+
+    private long mBlurDuration = DURATION;
+
+    public enum HOVER_STATUS {
+        APPEARING, APPEARED, DISAPPEARING, DISAPPEARED
+    };
+
+    private HOVER_STATUS mHoverStatus = HOVER_STATUS.DISAPPEARED;
+
+    public BlurLayout(Context context) {
+        super(context);
+    }
+
+    public BlurLayout(Context context, AttributeSet attrs) {
+        super(context, attrs);
+    }
+
+    public BlurLayout(Context context, AttributeSet attrs, int defStyle) {
+        super(context, attrs, defStyle);
+    }
+
+    @Override
+    public boolean onTouchEvent(MotionEvent event) {
+        return enableTouchEvent && gestureDetector.onTouchEvent(event);
+    }
+
+    private GestureDetector gestureDetector = new GestureDetector(getContext(), new BlurLayoutDetector());
+
+    class BlurLayoutDetector extends GestureDetector.SimpleOnGestureListener {
+
+        @Override
