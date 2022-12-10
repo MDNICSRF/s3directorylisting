@@ -123,3 +123,46 @@ public class BlurLayout extends RelativeLayout {
         if(mHoverView.getParent() != null){
             ((ViewGroup)(mHoverView.getParent())).removeView(mHoverView);
         }
+
+        addView(mHoverView, getFullParentSizeLayoutParams());
+
+        mHoverView.getViewTreeObserver().addOnGlobalLayoutListener(new ViewTreeObserver.OnGlobalLayoutListener() {
+            @Override
+            public void onGlobalLayout() {
+
+                startChildrenAppearAnimations();
+
+                startBlurImageAppearAnimator();
+
+                startHoverAppearAnimator();
+
+                if(Build.VERSION.SDK_INT >= 16)
+                    mHoverView.getViewTreeObserver().removeOnGlobalLayoutListener(this);
+                else
+                    mHoverView.getViewTreeObserver().removeGlobalOnLayoutListener(this);
+            }
+        });
+        return true;
+
+    }
+
+    /**
+     * Let hover view dismiss.
+     * Notice: only when hover view status is appeared, then, this may work.
+     */
+    public void dismissHover(){
+        if(getHoverStatus() != HOVER_STATUS.APPEARED || !mPlayingAnimators.isEmpty())
+            return;
+
+        startBlurImageDisappearAnimator();
+
+        startHoverDisappearAnimator();
+
+        startChildrenDisappearAnimations();
+    }
+
+    public void toggleHover(){
+        if(getHoverStatus() == HOVER_STATUS.DISAPPEARED)
+            showHover();
+        else if(getHoverStatus() == HOVER_STATUS.APPEARED)
+            dismissHover();
