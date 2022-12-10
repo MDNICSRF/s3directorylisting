@@ -90,3 +90,36 @@ public class BlurLayout extends RelativeLayout {
     class BlurLayoutDetector extends GestureDetector.SimpleOnGestureListener {
 
         @Override
+        public boolean onDown(MotionEvent e) {
+            return true;
+        }
+
+        @Override
+        public boolean onSingleTapUp(MotionEvent e) {
+            if(hover())
+                return true;
+            else
+                return super.onSingleTapConfirmed(e);
+        }
+    };
+
+    public void showHover(){
+        hover();
+    }
+
+    /**
+     * Let hover show.
+     * @return
+     */
+    private boolean hover(){
+        if(mHoverView == null)  return false;
+
+        if(getHoverStatus() != HOVER_STATUS.DISAPPEARED || !mPlayingAnimators.isEmpty())    return true;
+
+        removeView(mBlurImage);
+        if(enableBlurBackground)
+            addBlurImage();
+
+        if(mHoverView.getParent() != null){
+            ((ViewGroup)(mHoverView.getParent())).removeView(mHoverView);
+        }
