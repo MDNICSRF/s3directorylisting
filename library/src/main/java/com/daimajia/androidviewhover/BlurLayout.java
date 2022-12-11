@@ -231,3 +231,33 @@ public class BlurLayout extends RelativeLayout {
     }
 
     /**
+     * Sets whether or not touching the BlurLayout will trigger the Hover View and blur effect
+     * @param enableTouchEvent
+     */
+    public void enableTouchEvent(boolean enableTouchEvent) {
+        this.enableTouchEvent = enableTouchEvent;
+    }
+
+    public void enableBlurBackground(boolean enable){
+        enableBlurBackground = enable;
+    }
+
+    public void enableZoomBackground(boolean enable) {
+        enableBackgroundZoom = enable;
+    }
+
+    public void setBlurZoomRatio(float ratio){
+        if(ratio < 0)
+            throw new IllegalArgumentException("Can not set ratio less than 0");
+        mZoomRatio = ratio;
+    }
+
+    private void startBlurImageAppearAnimator(){
+        if(!enableBlurBackground || mBlurImage == null)    return;
+
+        AnimatorSet set = new AnimatorSet();
+         if(enableBackgroundZoom){
+            set.playTogether(
+                    ObjectAnimator.ofFloat(mBlurImage, "alpha", 0.8f, 1f),
+                    ObjectAnimator.ofFloat(mBlurImage, "scaleX", 1f, mZoomRatio),
+                    ObjectAnimator.ofFloat(mBlurImage, "scaleY", 1f, mZoomRatio)
