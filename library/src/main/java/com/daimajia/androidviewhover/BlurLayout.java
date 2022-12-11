@@ -166,3 +166,35 @@ public class BlurLayout extends RelativeLayout {
             showHover();
         else if(getHoverStatus() == HOVER_STATUS.APPEARED)
             dismissHover();
+    }
+
+    /**
+     * get currently hover status.
+     * @return
+     */
+    public HOVER_STATUS getHoverStatus(){
+        return mHoverStatus;
+    }
+
+    private void addBlurImage(){
+        Bitmap b = Util.getViewBitmap(this);
+        if(b == null)
+            return;
+        Bitmap bm = Blur.apply(getContext(), b, mBlurRadius);
+        ImageView im = new ImageView(getContext());
+        im.setImageBitmap(bm);
+        mBlurImage = im;
+        this.addView(im);
+    }
+
+    /**
+     * set background blur duration.
+     * @param duration
+     */
+    public void setBlurDuration(long duration){
+        if(duration > 100)
+            mBlurDuration = duration;
+    }
+
+
+    /**
