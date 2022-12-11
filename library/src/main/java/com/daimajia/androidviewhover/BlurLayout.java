@@ -198,3 +198,36 @@ public class BlurLayout extends RelativeLayout {
 
 
     /**
+     * set background blur radius.
+     * @param radius radius to be used for the gaussian blur operation, integer between 0 and 25 (inclusive)
+     */
+    public void setBlurRadius(int radius) {
+        if(radius < 0 || radius > 25){
+            throw new IllegalArgumentException("Radius must be between 0 and 25 (inclusive)");
+        }
+        this.mBlurRadius = radius;
+    }
+
+    /**
+     * bind a hover view with BlurLayout.
+     * @param hover
+     */
+    public void setHoverView(final View hover){
+        mHoverView = hover;
+
+        if(mHoverView == null)  return;
+
+        if(mHoverAppearAnimator != null)
+            mHoverAppearAnimator.setTarget(mHoverView);
+
+        mHoverView.setOnClickListener(new OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                dismissHover();
+
+            }
+        });
+    }
+
+    /**
