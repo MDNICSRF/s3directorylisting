@@ -261,3 +261,42 @@ public class BlurLayout extends RelativeLayout {
                     ObjectAnimator.ofFloat(mBlurImage, "alpha", 0.8f, 1f),
                     ObjectAnimator.ofFloat(mBlurImage, "scaleX", 1f, mZoomRatio),
                     ObjectAnimator.ofFloat(mBlurImage, "scaleY", 1f, mZoomRatio)
+            );
+        }
+        else{
+            set.playTogether(
+                    ObjectAnimator.ofFloat(mBlurImage, "alpha", 0f, 1f)
+            );
+        }
+        set.addListener(mGlobalListener);
+        set.addListener(mGlobalAppearingAnimators);
+        set.setDuration(mBlurDuration);
+        set.start();
+    }
+
+    private void startBlurImageDisappearAnimator(){
+        if(!enableBlurBackground || mBlurImage == null)    return;
+
+        AnimatorSet set = new AnimatorSet();
+        if(enableBackgroundZoom)
+            set.playTogether(
+                    ObjectAnimator.ofFloat(mBlurImage, "alpha", 1f, 0.8f),
+                    ObjectAnimator.ofFloat(mBlurImage, "scaleX", mZoomRatio, 1f),
+                    ObjectAnimator.ofFloat(mBlurImage, "scaleY", mZoomRatio, 1f)
+            );
+        else
+            set.playTogether(
+                    ObjectAnimator.ofFloat(mBlurImage, "alpha", 1f, 0f)
+            );
+
+        set.addListener(mGlobalListener);
+        set.addListener(mGlobalDisappearAnimators);
+        set.setDuration(mBlurDuration);
+        set.start();
+    }
+
+    private void startHoverAppearAnimator(){
+        if(mHoverAppearAnimator != null)
+            mHoverAppearAnimator.start();
+
+        if(mHoverAppearAnimationComposer != null)
