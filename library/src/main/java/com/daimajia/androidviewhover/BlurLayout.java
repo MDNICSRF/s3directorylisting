@@ -374,3 +374,26 @@ public class BlurLayout extends RelativeLayout {
                 }
             }
         }
+
+        @Override
+        public void onAnimationCancel(Animator animation) {
+
+        }
+
+        @Override
+        public void onAnimationRepeat(Animator animation) {
+
+        }
+    };
+
+    public Animator.AnimatorListener mGlobalDisappearAnimators = new Animator.AnimatorListener() {
+        @Override
+        public void onAnimationStart(Animator animation) {
+            mDisappearingAnimators.add(animation);
+            if(mDisappearListeners.size() == 1){
+                for(DisappearListener l : mDisappearListeners){
+                    mHoverStatus = HOVER_STATUS.DISAPPEARING;
+                    l.onStart();
+                }
+            }
+        }
