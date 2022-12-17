@@ -300,3 +300,22 @@ public class BlurLayout extends RelativeLayout {
             mHoverAppearAnimator.start();
 
         if(mHoverAppearAnimationComposer != null)
+            mHoverAppearAnimationComposer.playOn(mHoverView);
+    }
+
+    private void startHoverDisappearAnimator(){
+        if(mHoverDisappearAnimator != null)
+            mHoverDisappearAnimator.start();
+        if(mHoverDisappearAnimationComposer != null)
+            mHoverDisappearAnimationComposer.playOn(mHoverView);
+    }
+
+    private void startChildrenAppearAnimations(){
+        for(Map.Entry<View, ArrayList<AnimationProxy>> entry : mChildAppearAnimators.entrySet()){
+            for(AnimationProxy animator : entry.getValue()){
+                animator.start();
+            }
+        }
+    }
+
+    private void startChildrenDisappearAnimations(){
