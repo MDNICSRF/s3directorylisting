@@ -319,3 +319,29 @@ public class BlurLayout extends RelativeLayout {
     }
 
     private void startChildrenDisappearAnimations(){
+        for(View view : mChildDisappearAnimators.keySet()){
+            for(AnimationProxy animator : mChildDisappearAnimators.get(view)){
+                animator.start();
+            }
+        }
+    }
+
+    public interface AppearListener {
+        public void onStart();
+        public void onEnd();
+    }
+
+    public interface DisappearListener {
+        public void onStart();
+        public void onEnd();
+    }
+
+    public void addAppearListener(AppearListener l){
+        mAppearListeners.add(l);
+    }
+
+    public void removeAppearListener(AppearListener l){
+        mAppearListeners.remove(l);
+    }
+
+    public void addDisappearListener(DisappearListener l){
