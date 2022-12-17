@@ -345,3 +345,32 @@ public class BlurLayout extends RelativeLayout {
     }
 
     public void addDisappearListener(DisappearListener l){
+        mDisappearListeners.add(l);
+    }
+
+    public void removeDisappearListener(DisappearListener l){
+        mDisappearingAnimators.remove(l);
+    }
+
+    public Animator.AnimatorListener mGlobalAppearingAnimators = new Animator.AnimatorListener() {
+        @Override
+        public void onAnimationStart(Animator animation) {
+            mAppearingAnimators.add(animation);
+            if(mAppearingAnimators.size() == 1){
+                mHoverStatus = HOVER_STATUS.APPEARING;
+                for(AppearListener l : mAppearListeners){
+                    l.onStart();
+                }
+            }
+        }
+
+        @Override
+        public void onAnimationEnd(Animator animation) {
+            mAppearingAnimators.remove(animation);
+            mHoverStatus = HOVER_STATUS.APPEARED;
+            if(!mAppearListeners.isEmpty()){
+                for(AppearListener l : mAppearListeners){
+                    l.onEnd();
+                }
+            }
+        }
