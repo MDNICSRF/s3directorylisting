@@ -465,3 +465,39 @@ public class BlurLayout extends RelativeLayout {
         mHoverAppearAnimationComposer.withListener(mGlobalListener);
         mHoverAppearAnimationComposer.withListener(mGlobalAppearingAnimators);
     }
+
+    public void setHoverAppearAnimator(Animator animator){
+        mHoverAppearAnimationComposer = null;
+        mHoverAppearAnimator = animator;
+
+        animator.addListener(mGlobalListener);
+        animator.addListener(mGlobalAppearingAnimators);
+    }
+
+
+
+    public void setHoverDisappearAnimator(Techniques technique){
+        setHoverDisappearAnimator(technique, DURATION);
+    }
+
+    public void setHoverDisappearAnimator(Techniques technique, long duration){
+        setHoverDisappearAnimator(technique, duration, 0, null);
+    }
+
+    public void setHoverDisappearAnimator(Techniques technique, long duration, long delay, Interpolator interpolator){
+        setHoverDisappearAnimator(technique, duration, delay, interpolator, new Animator.AnimatorListener[]{});
+    }
+
+    public void setHoverDisappearAnimator(Techniques technique, long duration, long delay, Interpolator interpolator, Animator.AnimatorListener... listeners){
+        mHoverDisappearAnimator = null;
+        mHoverDisappearAnimationComposer = YoYo.with(technique).delay(delay).duration(duration).interpolate(interpolator);
+
+        for(Animator.AnimatorListener l : listeners)
+            mHoverDisappearAnimationComposer.withListener(l);
+
+        mHoverDisappearAnimationComposer.withListener(mGlobalListener);
+        mHoverDisappearAnimationComposer.withListener(mGlobalDisappearAnimators);
+    }
+
+    public void setHoverDisappearAnimator(Animator animator){
+        mHoverDisappearAnimationComposer = null;
