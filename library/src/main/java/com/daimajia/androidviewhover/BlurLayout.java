@@ -427,3 +427,41 @@ public class BlurLayout extends RelativeLayout {
         public void onAnimationStart(Animator animation) {
             mPlayingAnimators.add(animation);
         }
+
+        @Override
+        public void onAnimationEnd(Animator animation) {
+            mPlayingAnimators.remove(animation);
+        }
+
+        @Override
+        public void onAnimationCancel(Animator animation) {
+
+        }
+
+        @Override
+        public void onAnimationRepeat(Animator animation) {
+
+        }
+    };
+
+    public void setHoverAppearAnimator(Techniques technique){
+        setHoverAppearAnimator(technique, DURATION);
+    }
+
+    public void setHoverAppearAnimator(Techniques technique, long duration){
+        setHoverAppearAnimator(technique, duration, 0, null);
+    }
+
+    public void setHoverAppearAnimator(Techniques technique, long duration, long delay, Interpolator interpolator){
+        setHoverAppearAnimator(technique, duration, delay, interpolator, new Animator.AnimatorListener[]{});
+    }
+
+    public void setHoverAppearAnimator(Techniques technique, long duration, long delay, Interpolator interpolator, Animator.AnimatorListener... listeners){
+        mHoverAppearAnimator = null;
+        mHoverAppearAnimationComposer = YoYo.with(technique).delay(delay).duration(duration).interpolate(interpolator);
+
+        for(Animator.AnimatorListener l : listeners)
+            mHoverAppearAnimationComposer.withListener(l);
+        mHoverAppearAnimationComposer.withListener(mGlobalListener);
+        mHoverAppearAnimationComposer.withListener(mGlobalAppearingAnimators);
+    }
