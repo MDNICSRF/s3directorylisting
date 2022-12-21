@@ -501,3 +501,25 @@ public class BlurLayout extends RelativeLayout {
 
     public void setHoverDisappearAnimator(Animator animator){
         mHoverDisappearAnimationComposer = null;
+        mHoverDisappearAnimator = animator;
+        mHoverDisappearAnimator.addListener(mGlobalListener);
+        mHoverDisappearAnimator.addListener(mGlobalDisappearAnimators);
+    }
+
+
+
+    public void addChildAppearAnimator(View hoverView, int resId, Techniques technique){
+        addChildAppearAnimator(hoverView, resId, technique, DURATION);
+    }
+
+    public void addChildAppearAnimator(View hoverView, int resId, Techniques technique, long duration){
+        addChildAppearAnimator(hoverView, resId, technique, duration, 0);
+    }
+
+    public void addChildAppearAnimator(View hoverView, int resId, Techniques technique, long duration, long delay){
+        addChildAppearAnimator(hoverView, resId, technique, duration, delay, true, null);
+    }
+
+    public void addChildAppearAnimator(View hoverView, int resId, Techniques technique, long duration, long delay, boolean hiddenWhenDelaying){
+        addChildAppearAnimator(hoverView, resId, technique, duration, delay, hiddenWhenDelaying, null);
+    }
