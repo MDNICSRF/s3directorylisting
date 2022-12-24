@@ -523,3 +523,35 @@ public class BlurLayout extends RelativeLayout {
     public void addChildAppearAnimator(View hoverView, int resId, Techniques technique, long duration, long delay, boolean hiddenWhenDelaying){
         addChildAppearAnimator(hoverView, resId, technique, duration, delay, hiddenWhenDelaying, null);
     }
+
+    public void addChildAppearAnimator(View hoverView, int resId, Techniques technique, long duration, long delay, boolean hiddenWhenDelaying, Interpolator interpolator){
+        addChildAppearAnimator(hoverView, resId, technique, duration, delay, hiddenWhenDelaying, interpolator, new Animator.AnimatorListener[]{});
+    }
+
+    public void addChildAppearAnimator(View hoverView, int resId, Techniques technique, long duration, long delay, boolean hiddenWhenDelaying, Interpolator interpolator, Animator.AnimatorListener... listeners){
+        AnimationProxy executor = AnimationProxy.build(hoverView, resId, technique, duration, delay, hiddenWhenDelaying, interpolator, listeners);
+
+        View child = executor.getTarget();
+
+        if(mChildAppearAnimators.get(child) == null)
+            mChildAppearAnimators.put(child, new ArrayList<AnimationProxy>());
+
+        executor.withListener(mGlobalListener);
+        executor.withListener(mGlobalAppearingAnimators);
+        child.setVisibility(INVISIBLE);
+
+        mChildAppearAnimators.get(child).add(executor);
+    }
+
+    public void addChildAppearAnimator(View hoverView, int childId, Animator animator){
+        AnimationProxy executor = AnimationProxy.build(hoverView, childId, animator);
+
+        View child = executor.getTarget();
+
+        if(mChildAppearAnimators.get(child) == null)
+            mChildAppearAnimators.put(child, new ArrayList<AnimationProxy>());
+
+        executor.withListener(mGlobalListener);
+        executor.withListener(mGlobalAppearingAnimators);
+        mChildAppearAnimators.get(child).add(executor);
+    }
