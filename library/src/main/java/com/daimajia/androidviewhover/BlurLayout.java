@@ -600,3 +600,20 @@ public class BlurLayout extends RelativeLayout {
         executor.withListener(mGlobalListener);
         executor.withListener(mGlobalDisappearAnimators);
         mChildDisappearAnimators.get(child).add(executor);
+    }
+
+    public LayoutParams getFullParentSizeLayoutParams(){
+        LayoutParams pm = (LayoutParams)this.generateDefaultLayoutParams();
+        pm.width = this.getWidth();
+        pm.height = this.getHeight();
+        return pm;
+    }
+
+    public static void setGlobalDefaultDuration(long duration){
+        if(duration < 100)
+            throw new IllegalArgumentException("Duration can not be set to less than 100");
+        DURATION = duration;
+    }
+
+
+}
