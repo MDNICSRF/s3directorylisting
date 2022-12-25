@@ -43,3 +43,40 @@ public class AnimationProxy implements Runnable {
         this.delay = delay;
         this.duration = duration;
         this.invisibleWhenDelaying = invisibleWhenDelaying;
+
+        for(Animator.AnimatorListener l : listeners)
+            this.composer.withListener(l);
+    }
+
+    public static AnimationProxy build(View hoverView, int resId, Techniques technique, long duration, long delay, boolean invisibleWhenDelaying, Interpolator interpolator, Animator.AnimatorListener... listeners){
+        return new AnimationProxy(hoverView, resId, technique, duration, delay, invisibleWhenDelaying, interpolator, listeners);
+    }
+
+    public static AnimationProxy build(View hoverView, int childId, Animator animator){
+        return new AnimationProxy(hoverView, childId, animator);
+    }
+
+    private AnimationProxy(View hoverView, int childId, Animator animator){
+        if(animator == null)
+            throw new IllegalArgumentException("Animator can not be null");
+
+        if(hoverView == null)
+            throw new IllegalArgumentException("hoverView can not be null");
+
+        View child = hoverView.findViewById(childId);
+        if(child == null)
+            throw new IllegalArgumentException("Can not find child");
+
+        this.targetView = child;
+        this.duration = animator.getDuration();
+        this.delay = animator.getStartDelay();
+        this.interpolator = null;
+        this.animator = animator;
+    }
+
+    public void start(){
+        startTime = System.currentTimeMillis();
+        targetView.post(this);
+    }
+
+    public boolean isDelaying(){
