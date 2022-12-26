@@ -80,3 +80,28 @@ public class AnimationProxy implements Runnable {
     }
 
     public boolean isDelaying(){
+        long current = System.currentTimeMillis();
+        if(current - startTime <= delay)
+            return true;
+        else
+            return false;
+    }
+
+    @Override
+    public void run() {
+        if(startTime == -1)
+            throw new IllegalStateException("You can not call run directly, you should call start!");
+
+        if(!isDelaying()){
+            if(targetView.getVisibility() != View.VISIBLE)
+                targetView.setVisibility(View.VISIBLE);
+
+            if(composer!=null){
+                composer.delay(0);
+                composer.playOn(targetView);
+            }
+            if(animator != null){
+                animator.setStartDelay(0);
+                animator.start();
+            }
+        }else{
