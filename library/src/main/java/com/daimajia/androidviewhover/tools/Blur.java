@@ -27,3 +27,13 @@ public class Blur {
         script.setInput(input);
         script.forEach(output);
         output.copyTo(bitmap);
+
+        sentBitmap.recycle();
+        rs.destroy();
+        input.destroy();
+        output.destroy();
+        script.destroy();
+
+        return bitmap;
+    }
+}
