@@ -105,3 +105,21 @@ public class AnimationProxy implements Runnable {
                 animator.start();
             }
         }else{
+            if(invisibleWhenDelaying && targetView.getVisibility() != View.INVISIBLE){
+                targetView.setVisibility(View.INVISIBLE);
+            }
+            targetView.post(this);
+        }
+    }
+
+    public View getTarget(){
+        return this.targetView;
+    }
+
+    public void withListener(Animator.AnimatorListener l){
+        if(composer != null)
+            composer.withListener(l);
+        if(animator != null)
+            animator.addListener(l);
+    }
+}
