@@ -1,3 +1,3 @@
 package com.daimajia.androidviewhover.tools;
 
-import 
+import android.graphics.Bitmap
