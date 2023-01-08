@@ -8,4 +8,5 @@ import com.nineoldandroids.view.ViewHelper;
 
 public class Util {
 
-    public static Bitmap get
+    public static Bitmap getViewBitmap(View v) {
+        
