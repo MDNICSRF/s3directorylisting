@@ -9,4 +9,4 @@ import com.nineoldandroids.view.ViewHelper;
 public class Util {
 
     public static Bitmap getViewBitmap(View v) {
-        
+        if(v.getWidth() == 0 || v.g
