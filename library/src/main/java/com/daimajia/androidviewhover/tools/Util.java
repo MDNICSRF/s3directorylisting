@@ -12,4 +12,5 @@ public class Util {
         if(v.getWidth() == 0 || v.getHeight() == 0)
             return null;
         Bitmap b = Bitmap.createBitmap( v.getWidth(), v.getHeight(), Bitmap.Config.ARGB_8888);
-     
+        Canvas c = new Canvas(b);
+  
