@@ -11,4 +11,5 @@ public class Util {
     public static Bitmap getViewBitmap(View v) {
         if(v.getWidth() == 0 || v.getHeight() == 0)
             return null;
-        Bitmap b = Bitmap.createBitmap( v.getWidth(), v.getHeigh
+        Bitmap b = Bitmap.createBitmap( v.getWidth(), v.getHeight(), Bitmap.Config.ARGB_8888);
+     
