@@ -17,3 +17,4 @@ public class Util {
         return b;
     }
 
+    public static void reset(View ta
