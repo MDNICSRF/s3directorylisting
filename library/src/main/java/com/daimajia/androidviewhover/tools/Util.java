@@ -17,4 +17,5 @@ public class Util {
         return b;
     }
 
-    public static void reset(View ta
+    public static void reset(View target) {
+        ViewHelper.s
