@@ -18,4 +18,5 @@ public class Util {
     }
 
     public static void reset(View target) {
-        ViewHelper.s
+        ViewHelper.setAlpha(target, 1);
+        View
