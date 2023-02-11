@@ -20,4 +20,5 @@ public class Util {
     public static void reset(View target) {
         ViewHelper.setAlpha(target, 1);
         ViewHelper.setScaleX(target, 1);
-        ViewHelper.setScaleY(target, 1
+        ViewHelper.setScaleY(target, 1);
+        ViewHelper.setTranslation
