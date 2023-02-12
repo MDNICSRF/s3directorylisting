@@ -21,4 +21,5 @@ public class Util {
         ViewHelper.setAlpha(target, 1);
         ViewHelper.setScaleX(target, 1);
         ViewHelper.setScaleY(target, 1);
-        ViewHelper.setTranslation
+        ViewHelper.setTranslationX(target, 0);
+        ViewHelper.se
