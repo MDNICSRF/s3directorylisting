@@ -23,4 +23,5 @@ public class Util {
         ViewHelper.setScaleY(target, 1);
         ViewHelper.setTranslationX(target, 0);
         ViewHelper.setTranslationY(target, 0);
-        V
+        ViewHelper.setRotation(target, 0);
+ 
