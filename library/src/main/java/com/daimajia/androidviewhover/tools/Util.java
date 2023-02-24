@@ -28,3 +28,6 @@ public class Util {
         ViewHelper.setRotationX(target, 0);
         ViewHelper.setPivotX(target, target.getMeasuredWidth() / 2.0f);
         ViewHelper.setPivotY(target, target.getMeasuredHeight() / 2.0f);
+    }
+
+}
