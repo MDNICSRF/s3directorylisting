@@ -27,4 +27,4 @@ public class Util {
         ViewHelper.setRotationY(target, 0);
         ViewHelper.setRotationX(target, 0);
         ViewHelper.setPivotX(target, target.getMeasuredWidth() / 2.0f);
-        ViewHelper.setPivotY
+        ViewHelper.setPivotY(target, target.getMeasuredHeight() / 2.0f);
